@@ -7,7 +7,6 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.maps.android.data.Feature;
 import com.google.maps.android.data.geojson.GeoJsonFeature;
 import com.google.maps.android.data.geojson.GeoJsonLayer;
 import com.google.maps.android.data.geojson.GeoJsonLineStringStyle;
@@ -26,6 +25,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
+
+import static junit.framework.Assert.assertEquals;
 
 public class GeoJsonActivity extends BaseActivity {
 
@@ -49,12 +50,17 @@ public class GeoJsonActivity extends BaseActivity {
         new DownloadGeoJsonFile().execute(getString(R.string.geojson_url));
     }
 
-    private void retrieveFileFromResource() {
+    public void retrieveFileFromResource() {
         try {
+            // Hay que crear metodo para colorear caya capa de geojson.
             GeoJsonLayer layerM = new GeoJsonLayer(getMap(), R.raw.ruta_m, this);
-            GeoJsonLineStringStyle ruta_m = new GeoJsonLineStringStyle();
-            ruta_m.setColor(Color.RED);
+            layerM.getDefaultLineStringStyle().setColor(Color.BLUE);
+            assertEquals(Color.BLUE, layerM.getDefaultLineStringStyle().getColor());
+
             GeoJsonLayer layerK = new GeoJsonLayer(getMap(), R.raw.ruta_k, this);
+            layerK.getDefaultLineStringStyle().setColor(Color.RED);
+            assertEquals(Color.BLUE, layerM.getDefaultLineStringStyle().getColor());
+
             addGeoJsonLayerToMap(layerM);
             addGeoJsonLayerToMap(layerK);
         } catch (IOException e) {
@@ -63,6 +69,15 @@ public class GeoJsonActivity extends BaseActivity {
             Log.e(mLogTag, "GeoJSON file could not be converted to a JSONObject");
         }
     }
+
+
+//    GeoJsonLayer mLayer;
+//
+//    public void DefaultLineStringStyle() throws Exception {
+//        mLayer.getDefaultLineStringStyle().setColor(Color.BLUE);
+//        assertEquals(Color.BLUE, mLayer.getDefaultLineStringStyle().getColor());
+//    }
+
 
     private class DownloadGeoJsonFile extends AsyncTask<String, Void, GeoJsonLayer> {
 
