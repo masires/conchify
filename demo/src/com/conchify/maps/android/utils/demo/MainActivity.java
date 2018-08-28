@@ -33,14 +33,14 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         mListView = (ViewGroup) findViewById(R.id.list);
 
-        addDemo("GeoJSON Layer", GeoJsonActivity.class);
+        mapAct("Trayectoria de Conchos", GeoJsonActivity.class);
     }
 
-    private void addDemo(String demoName, Class<? extends Activity> activityClass) {
+    private void mapAct(String actName, Class<? extends Activity> activityClass) {
         Button b = new Button(this);
         ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         b.setLayoutParams(layoutParams);
-        b.setText(demoName);
+        b.setText(actName);
         b.setTag(activityClass);
         b.setOnClickListener(this);
         mListView.addView(b);
