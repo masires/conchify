@@ -53,6 +53,7 @@ public class GeoJsonActivity extends BaseActivity {
     public void retrieveFileFromResource() {
         try {
             // Hay que crear metodo para colorear caya capa de geojson.
+            // https://github.com/googlemaps/android-maps-utils/blob/3b8520ed07199074e5e7124872b52b0c4f85ff90/library/tests/src/com/google/maps/android/data/geojson/GeoJsonLayerTest.java#L61
             GeoJsonLayer layerM = new GeoJsonLayer(getMap(), R.raw.ruta_m, this);
             layerM.getDefaultLineStringStyle().setColor(Color.BLUE);
             assertEquals(Color.BLUE, layerM.getDefaultLineStringStyle().getColor());
