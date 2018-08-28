@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Conchify</string>
+    <string name="input_text">Buscando…</string>
+    <string name="button_send">Enviar!</string>
+    <string name="geojson_url"></string>
+</resources>
