@@ -16,11 +16,15 @@
 
 package com.conchify.maps.android.utils.demo;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
+
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.MapStyleOptions;
 
 public abstract class BaseActivity extends FragmentActivity implements OnMapReadyCallback {
     private GoogleMap mMap;
@@ -28,11 +32,17 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
     protected int getLayoutId() {
         return R.layout.geojson;
     }
+    private static final String TAG = BaseActivity.class.getSimpleName();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
+
+        SupportMapFragment mapFragment =
+                (SupportMapFragment) getSupportFragmentManager()
+                        .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
         setUpMap();
     }
 
@@ -48,6 +58,20 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
             return;
         }
         mMap = map;
+
+        try {
+            boolean success = mMap.setMapStyle(
+
+                    MapStyleOptions.loadRawResourceStyle(
+
+                            this, R.raw.style_json));
+            if (!success) {
+                Log.e(TAG, "Style parsing failed.");
+            }
+        } catch (Resources.NotFoundException e) {
+            Log.e(TAG, "Can't find style. Error: ", e);
+        }
+
         startDemo();
     }
 
