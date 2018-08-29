@@ -1,7 +1,6 @@
 # Conchify for Android
-
-
 Conchify is an app created on Android Studio, implementing Google Maps 15.0.1, for the creation of Conchos' routes maps, in Santiago de los Caballeros, Santiago, Dominican Republic.
+
 
 
 ## Installation
@@ -11,10 +10,13 @@ git@github.com:masires/conchify-alpha.git
 ```
 
 
-## Maintainers
-This project is mantained by:
-* [Emanuel Simón](https://github.com/masires)
-* [Gabriel Rodríguez](https://github.com/Garoto0518)
+## Various Resources
+* [ColorSafe](http://colorsafe.co/) and [Accessible Color Matrix](https://toolness.github.io/accessible-color-matrix/): ADA compliant color pickers.
+* [tycah.ch](https://www.tydac.ch/color/) and [Binary Hex Converter](https://www.binaryhexconverter.com/hex-to-decimal-converter): RGB/HEX to int color convertors.
+* [MapStyle](https://mapstyle.withgoogle.com/), [Snazzy Maps](https://snazzymaps.com/) and [MapStylr](http://www.mapstylr.com/): map style generators.
+* [uMap](http://umap.openstreetmap.fr/en/map/new), [GeoJson Editor](https://tomscholz.github.io/geojson-editor/), [GeoJson.io](http://geojson.io): GeoJson editors.
+* [Icon Generator](https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html)
+
 
 ## To-Do
 * Allow user to change map style manually.
@@ -26,9 +28,13 @@ This project is mantained by:
 * Connect "Quejas" form to MySQL.
 
 
+## Maintainers
+This project is mantained by:
+* [Emanuel Simón](https://github.com/masires)
+* [Gabriel Rodríguez](https://github.com/Garoto0518)
+
 
 ## Contributing
-
 1. Fork it
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -m 'Add some feature')
