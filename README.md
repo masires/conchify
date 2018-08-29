@@ -20,7 +20,8 @@ This project is mantained by:
 * Allow user to change map style manually.
 * Static maps with individual maps and related info.
 * Add UI controllers (zoom, compass, location, toolbar).
-* GeoJson layer legend.
+* GeoJson layer legend (show route when clicking on layer, or show textbox with available routes).
+* Make sure all GeoJson layer colors are ADA compliant.
 * Add "Quejas" form.
 * Connect "Quejas" form to MySQL.
 
