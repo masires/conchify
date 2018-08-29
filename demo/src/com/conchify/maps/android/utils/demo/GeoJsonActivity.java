@@ -1,24 +1,19 @@
 package com.conchify.maps.android.utils.demo;
 
-import com.google.maps.android.data.Feature;
-import com.google.maps.android.data.geojson.GeoJsonLayer;
-import com.google.maps.android.data.geojson.GeoJsonLineStringStyle;
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.model.BitmapDescriptor;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.maps.android.data.geojson.GeoJsonFeature;
-import com.google.maps.android.data.geojson.GeoJsonLayer;
-import com.google.maps.android.data.geojson.GeoJsonLineStringStyle;
-import com.google.maps.android.data.geojson.GeoJsonPointStyle;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
+
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.maps.android.data.Feature;
+import com.google.maps.android.data.geojson.GeoJsonFeature;
+import com.google.maps.android.data.geojson.GeoJsonLayer;
+import com.google.maps.android.data.geojson.GeoJsonLineStringStyle;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -39,10 +34,8 @@ public class GeoJsonActivity extends BaseActivity {
 
     @Override
     protected void startDemo() {
-        // Download the GeoJSON file.
         getMap().setMinZoomPreference(12);
         retrieveFileFromResource();
-        // Alternate approach of loading a local GeoJSON file.
         //retrieveFileFromResource();
     }
 
