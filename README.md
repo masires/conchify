@@ -14,14 +14,16 @@ git@github.com:masires/conchify-alpha.git
 * [ColorSafe](http://colorsafe.co/) and [Accessible Color Matrix](https://toolness.github.io/accessible-color-matrix/): ADA compliant color pickers.
 * [tycah.ch](https://www.tydac.ch/color/) and [Binary Hex Converter](https://www.binaryhexconverter.com/hex-to-decimal-converter): RGB/HEX to int color convertors.
 * [MapStyle](https://mapstyle.withgoogle.com/), [Snazzy Maps](https://snazzymaps.com/) and [MapStylr](http://www.mapstylr.com/): map style generators.
-* [uMap](http://umap.openstreetmap.fr/en/map/new), [GeoJson Editor](https://tomscholz.github.io/geojson-editor/), [GeoJson.io](http://geojson.io): GeoJson editors.
-* [Icon Generator](https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html)
+* [uMap](http://umap.openstreetmap.fr/en/map/new), [Simple-GeoJson](https://tomscholz.github.io/geojson-editor/), [GeoJson.io](http://geojson.io): GeoJson editors.
+* [Icon Generator](https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html): icon generator (lol).
 
 
 ## To-Do
+* Add UI to MainActivity.
 * Allow user to change map style manually.
 * Static maps with individual maps and related info.
 * Add UI controllers (zoom, compass, location, toolbar).
+* Refactor GeoJson loading method; create route legend loading method.
 * GeoJson layer legend (show route when clicking on layer, or show textbox with available routes).
 * Make sure all GeoJson layer colors are ADA compliant.
 * Add "Quejas" form.
