@@ -53,13 +53,15 @@ public class GeoJsonActivity extends BaseActivity implements OnMapReadyCallback 
         try {
             // Hay que crear metodo para colorear caya capa de geojson.
             // https://github.com/googlemaps/android-maps-utils/blob/3b8520ed07199074e5e7124872b52b0c4f85ff90/library/tests/src/com/google/maps/android/data/geojson/GeoJsonLayerTest.java#L61
-            GeoJsonLayer layerM = new GeoJsonLayer(getMap(), R.raw.ruta_m, this);
-            layerM.getDefaultLineStringStyle().setColor(Color.BLUE);
-            assertEquals(Color.BLUE, layerM.getDefaultLineStringStyle().getColor());
+            GeoJsonLayer layerM = new GeoJsonLayer(getMap(), R.raw.route_m, this);
+            layerM.getDefaultLineStringStyle().setColor(Color.parseColor("#9a12b3"));
+            layerM.getDefaultLineStringStyle().setWidth(15);
+//            assertEquals(Color.BLUE, layerM.getDefaultLineStringStyle().getColor());
 
-            GeoJsonLayer layerK = new GeoJsonLayer(getMap(), R.raw.ruta_k, this);
-            layerK.getDefaultLineStringStyle().setColor(Color.RED);
-            assertEquals(Color.BLUE, layerM.getDefaultLineStringStyle().getColor());
+            GeoJsonLayer layerK = new GeoJsonLayer(getMap(), R.raw.route_k, this);
+            layerK.getDefaultLineStringStyle().setColor(Color.parseColor("#2b390e"));
+            layerK.getDefaultLineStringStyle().setWidth(15);
+//            assertEquals(Color.BLUE, layerM.getDefaultLineStringStyle().getColor());
 
             addGeoJsonLayerToMap(layerM);
             addGeoJsonLayerToMap(layerK);
