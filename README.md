@@ -22,7 +22,7 @@ git@github.com:masires/conchify-alpha.git
 * Add UI to MainActivity.
 * Allow user to change map style manually.
 * Static maps with individual maps and related info.
-* Add UI controllers (zoom, compass, location, toolbar).
+* Add UI controllers (compass, toolbar, search bar).
 * Refactor GeoJson loading method; create route legend loading method.
 * GeoJson layer legend (show route when clicking on layer, or show textbox with available routes).
 * Make sure all GeoJson layer colors are ADA compliant.
