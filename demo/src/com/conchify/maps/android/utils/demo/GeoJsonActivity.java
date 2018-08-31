@@ -1,12 +1,7 @@
 package com.conchify.maps.android.utils.demo;
 
-import android.Manifest;
-import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.AsyncTask;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -24,8 +19,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
-
-import static junit.framework.Assert.assertEquals;
 
 public class GeoJsonActivity extends BaseActivity implements OnMapReadyCallback {
 
