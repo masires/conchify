@@ -1,60 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <fragment
-            android:id="@+id/map"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentTop="true"
-            android:name="com.google.android.gms.maps.SupportMapFragment"
-            tools:layout="@layout/geojson"/>
-
-    <LinearLayout
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:orientation="horizontal"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
-        android:background="#7FFFFFFF">
+        tools:layout="@layout/geojson" />
+
+    <ScrollView
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="175dp"
+
+        android:layout_alignParentBottom="true"
+
+        android:layout_alignParentLeft="true"
+
+        android:layout_alignParentStart="true">
+
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:background="@android:color/holo_red_dark">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textAlignment="center"
-                android:text="K"
-                android:gravity="center"
-                android:textColor="@android:color/white"/>
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:background="#fff"
+
+            android:orientation="vertical"
+
+            android:paddingEnd="5dp"
+
+            android:paddingRight="5dp">
+
+
+            <CheckBox
+                android:id="@+id/compass_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:onClick="setCompassEnabled"
+                android:text="@string/compass" />
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:background="@android:color/holo_blue_dark">
+    </ScrollView>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textAlignment="center"
-                android:text="M"
-                android:gravity="center"
-                android:textColor="@android:color/white"/>
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="25dp"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:background="#7FFFFFFF">-->
 
-        </LinearLayout>
+    <!--<LinearLayout-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="@android:color/holo_red_dark">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:textAlignment="center"-->
+    <!--android:text="K"-->
+    <!--android:gravity="center"-->
+    <!--android:textColor="@android:color/white"/>-->
+
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="@android:color/holo_blue_dark">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:textAlignment="center"-->
+    <!--android:text="M"-->
+    <!--android:gravity="center"-->
+    <!--android:textColor="@android:color/white"/>-->
+
+    <!--</LinearLayout>-->
 
 
-    </LinearLayout>
+    <!--</LinearLayout>-->
 
 
 </RelativeLayout>

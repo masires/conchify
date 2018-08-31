@@ -1,11 +1,17 @@
 package com.conchify.maps.android.utils.demo;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.AsyncTask;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.maps.android.data.Feature;
 import com.google.maps.android.data.geojson.GeoJsonLayer;
@@ -21,9 +27,10 @@ import java.net.URL;
 
 import static junit.framework.Assert.assertEquals;
 
-public class GeoJsonActivity extends BaseActivity {
+public class GeoJsonActivity extends BaseActivity implements OnMapReadyCallback {
 
     private final static String mLogTag = "GeoJsonDemo";
+
 
 
     protected int getLayoutId() {
@@ -34,6 +41,7 @@ public class GeoJsonActivity extends BaseActivity {
     protected void startDemo() {
         getMap().setMinZoomPreference(12);
         retrieveFileFromResource();
+        //getLocationPermission();
         //retrieveFileFromResource();
     }
 
@@ -61,7 +69,6 @@ public class GeoJsonActivity extends BaseActivity {
             Log.e(mLogTag, "GeoJSON file could not be converted to a JSONObject");
         }
     }
-
 
 //    GeoJsonLayer mLayer;
 //
@@ -113,7 +120,7 @@ public class GeoJsonActivity extends BaseActivity {
     private void addGeoJsonLayerToMap(GeoJsonLayer layer) {
 
         layer.addLayerToMap();
-        getMap().moveCamera(CameraUpdateFactory.newLatLng(new LatLng(19.457258,-70.6888 )));
+        getMap().moveCamera(CameraUpdateFactory.newLatLng(new LatLng(19.457258, -70.6888)));
         // Demonstrate receiving features via GeoJsonLayer clicks.
         layer.setOnFeatureClickListener(new GeoJsonLayer.GeoJsonOnFeatureClickListener() {
             @Override
@@ -127,5 +134,7 @@ public class GeoJsonActivity extends BaseActivity {
 
     }
 
+
 }
+
 
