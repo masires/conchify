@@ -4,4 +4,13 @@
     <string name="input_text">Buscando…</string>
     <string name="button_send">Enviar!</string>
     <string name="geojson_url"></string>
+    <string name="rotate">Rotate Gestures</string>
+    <string name="zoom_gestures">Zoom Gestures</string>
+    <string name="tilt">Tilt Gestures</string>
+    <string name="mylocation_layer">My Location Layer</string>
+    <string name="scroll">Scroll Gestures</string>
+    <string name="mylocation_button">My Location Button</string>
+    <string name="compass">Compass</string>
+    <string name="zoom_buttons">Zoom Buttons</string>
+
 </resources>
