@@ -106,14 +106,16 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
 
         mUiSettings = mMap.getUiSettings();
 
-
-
         mUiSettings.setZoomControlsEnabled(true);
         mUiSettings.setCompassEnabled(true);
-        mMap.getUiSettings().setCompassEnabled(true);
         mUiSettings.setMyLocationButtonEnabled(true);
+        
+
         mMap.setMyLocationEnabled(true);
-        mUiSettings.setMapToolbarEnabled(true);
+//        mMap.getUiSettings().setCompassEnabled(true);
+//        mMap.setMyLocationEnabled(true);
+//        mUiSettings.setMapToolbarEnabled(true);
+ //       mUi
         //   mUiSettings.
 
 //        mMap.setMyLocationEnabled(true);
@@ -190,7 +192,7 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
                     mLocationPermissionGranted = true;
                     //Initialize Map
 
-                    getMap();
+                    startDemo();
 
                 }
             }
@@ -234,35 +236,30 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
 //        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, zoom));
 //    }
 
-    public void setCompassEnabled(View v) {
+//    public void setCompassEnabled(View v) {
 
-        if (!checkReady()) {
-
-            return;
-
-        }
 
         // Enables/disables the compass (icon in the top-left for LTR locale or top-right for RTL
 
         // locale that indicates the orientation of the map).
 
-        mUiSettings.setCompassEnabled(((CheckBox) v).isChecked());
+//        mUiSettings.setCompassEnabled(((CheckBox) v).isChecked());
+//        ((CheckBox) v).setButtonDrawable(View.GONE);
+//    }
 
-    }
-
-    private boolean checkReady() {
-
-        if (mMap == null) {
-
-            Toast.makeText(this, "LoL", Toast.LENGTH_SHORT).show();
-
-            return false;
-
-        }
-
-        return true;
-
-    }
+//    private boolean checkReady() {
+//
+//        if (mMap == null) {
+//
+//            Toast.makeText(this, "LoL", Toast.LENGTH_SHORT).show();
+//
+//            return false;
+//
+//        }
+//
+//        return true;
+//
+//    }
 
 
 }
