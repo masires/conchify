@@ -25,15 +25,22 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
-import android.view.View;
-import android.widget.CheckBox;
 import android.widget.Toast;
 
+import com.google.android.gms.common.api.Status;
+import com.google.android.gms.location.places.AutocompleteFilter;
+import com.google.android.gms.location.places.Place;
+import com.google.android.gms.location.places.ui.PlaceAutocompleteFragment;
+import com.google.android.gms.location.places.ui.PlaceSelectionListener;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.UiSettings;
+import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 public abstract class BaseActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -50,6 +57,10 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
     //private static final float DEFAULT_ZOOM = 15f;
     private UiSettings mUiSettings;
 
+    private PlaceAutocompleteFragment placeAutocompleteFragment;
+
+    Marker marker;
+
     protected int getLayoutId() {
         return R.layout.geojson;
     }
@@ -61,6 +72,28 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
 
+        placeAutocompleteFragment = (PlaceAutocompleteFragment)getFragmentManager().findFragmentById(R.id.place_autocomplete_fragment);
+
+        placeAutocompleteFragment.setFilter(new AutocompleteFilter.Builder().setCountry("DO").build());
+
+        placeAutocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
+            @Override
+            public void onPlaceSelected(Place place) {
+                final LatLng latLngLoc = place.getLatLng();
+
+                if (marker != null){
+                    marker.remove();
+                }
+                marker = mMap.addMarker(new MarkerOptions().position(latLngLoc).title(place.getName().toString()));
+                mMap.animateCamera(CameraUpdateFactory.zoomTo(12),2000,null);
+//                mMap.moveCamera();
+            }
+
+            @Override
+            public void onError(Status status) {
+                Toast.makeText(BaseActivity.this,"" + status.toString(),Toast.LENGTH_SHORT).show();
+            }
+        });
 
         SupportMapFragment mapFragment =
                 (SupportMapFragment) getSupportFragmentManager()
@@ -112,6 +145,7 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
         
 
         mMap.setMyLocationEnabled(true);
+
 //        mMap.getUiSettings().setCompassEnabled(true);
 //        mMap.setMyLocationEnabled(true);
 //        mUiSettings.setMapToolbarEnabled(true);
