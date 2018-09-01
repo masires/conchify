@@ -33,7 +33,6 @@ git@github.com:masires/conchify-alpha.git
 ## Maintainers
 This project is mantained by:
 * [Emanuel Simón](https://github.com/masires)
-* [Gabriel Rodríguez](https://github.com/Garoto0518)
 
 
 ## Contributing
