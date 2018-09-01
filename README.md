@@ -6,7 +6,7 @@ Conchify is an app created on Android Studio, implementing Google Maps 15.0.1, f
 ## Installation
 Clone this repository and import into **Android Studio**
 ```bash
-git@github.com:masires/conchify-alpha.git
+git@github.com:masires/conchify.git
 ```
 
 
