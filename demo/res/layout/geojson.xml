@@ -3,96 +3,132 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
+    <!--android:orientation="vertical"-->
+    <!--&gt;-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/topPanel"
+        android:orientation="vertical">
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/place_autocomplete_fragment"
+            android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+            android:layout_margin="5dp"
+            android:layout_weight="5"/>
+            <!--android:name="com.google.android.gms.location.places."-->
+
+    </LinearLayout>
 
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/topPanel"
         tools:layout="@layout/geojson" />
-
-    <ScrollView
-
-        android:layout_width="wrap_content"
-
-        android:layout_height="175dp"
-
-        android:layout_alignParentBottom="true"
-
-        android:layout_alignParentLeft="true"
-
-        android:layout_alignParentStart="true">
-
-
-        <LinearLayout
-
-            android:layout_width="wrap_content"
-
-            android:layout_height="wrap_content"
-
-            android:background="#fff"
-
-            android:orientation="vertical"
-
-            android:paddingEnd="5dp"
-
-            android:paddingRight="5dp">
-
-
-            <CheckBox
-                android:id="@+id/compass_toggle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:checked="true"
-                android:onClick="setCompassEnabled"
-                android:text="@string/compass" />
-
-        </LinearLayout>
-
-    </ScrollView>
-
-    <!--<LinearLayout-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="25dp"-->
-    <!--android:orientation="horizontal"-->
     <!--android:layout_alignParentTop="true"-->
-    <!--android:background="#7FFFFFFF">-->
+
+
+    <!--<AutoCompleteTextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:textSize="15sp"-->
+        <!--android:textColor="#000"-->
+        <!--android:id="@+id/input_search"-->
+        <!--android:background="@null"-->
+        <!--android:singleLine="true"-->
+        <!--android:hint="Enter Address, City or Zip Code"-->
+        <!--android:imeOptions="actionSearch"-->
+        <!--/>-->
+    <!--android:layout_toRightOf="@+"-->
+
+
+    <!--<ScrollView-->
+
+        <!--android:layout_width="wrap_content"-->
+
+        <!--android:layout_height="175dp"-->
+
+        <!--android:layout_alignParentBottom="true"-->
+
+        <!--android:layout_alignParentLeft="true"-->
+
+        <!--android:layout_alignParentStart="true">-->
+
+
+        <!--<LinearLayout-->
+
+            <!--android:layout_width="wrap_content"-->
+
+            <!--android:layout_height="wrap_content"-->
+
+            <!--android:background="#fff"-->
+            <!--android:visibility="invisible"-->
+            <!--android:orientation="vertical"-->
+            <!--android:paddingEnd="5dp"-->
+
+            <!--android:paddingRight="5dp">-->
+
+
+            <!--<CheckBox-->
+                <!--android:id="@+id/compass_toggle"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:checked="true"-->
+                <!--android:onClick="setCompassEnabled"-->
+                <!--android:visibility="invisible"/>-->
+               <!--/>/ android:text="@string/compass" />-->
+
+        <!--</LinearLayout>-->
+
+    <!--</ScrollView>-->
 
     <!--<LinearLayout-->
-    <!--android:layout_width="0dp"-->
-    <!--android:layout_weight="1"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:background="@android:color/holo_red_dark">-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="25dp"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:background="#7FFFFFFF"-->
+        <!--android:orientation="horizontal">-->
 
-    <!--<TextView-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:textAlignment="center"-->
-    <!--android:text="K"-->
-    <!--android:gravity="center"-->
-    <!--android:textColor="@android:color/white"/>-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@android:color/holo_red_dark">-->
 
-    <!--</LinearLayout>-->
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center"-->
+                <!--android:text="K"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@android:color/white" />-->
 
-    <!--<LinearLayout-->
-    <!--android:layout_width="0dp"-->
-    <!--android:layout_weight="1"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:background="@android:color/holo_blue_dark">-->
+        <!--</LinearLayout>-->
 
-    <!--<TextView-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:textAlignment="center"-->
-    <!--android:text="M"-->
-    <!--android:gravity="center"-->
-    <!--android:textColor="@android:color/white"/>-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@android:color/holo_blue_dark">-->
 
-    <!--</LinearLayout>-->
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center"-->
+                <!--android:text="M"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@android:color/white" />-->
+
+        <!--</LinearLayout>-->
 
 
     <!--</LinearLayout>-->
