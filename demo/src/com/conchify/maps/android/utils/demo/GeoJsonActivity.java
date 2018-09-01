@@ -59,10 +59,6 @@ public class GeoJsonActivity extends BaseActivity implements OnMapReadyCallback 
             layerM.getDefaultLineStringStyle().setWidth(15);
           //  assertEquals(Color.BLUE, layerM.getDefaultLineStringStyle().getColor());
 
-            GeoJsonLayer layerK = new GeoJsonLayer(getMap(), R.raw.route_k, this);
-            layerK.getDefaultLineStringStyle().setColor(Color.parseColor("#2b390e"));
-            layerK.getDefaultLineStringStyle().setWidth(15);
-          //  assertEquals(Color.BLUE, layerM.getDefaultLineStringStyle().getColor());
 
           
             GeoJsonLayer layerA = new GeoJsonLayer(getMap(), R.raw.route_a, this);
