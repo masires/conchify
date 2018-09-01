@@ -56,15 +56,16 @@ public class GeoJsonActivity extends BaseActivity implements OnMapReadyCallback 
             GeoJsonLayer layerM = new GeoJsonLayer(getMap(), R.raw.route_m, this);
             layerM.getDefaultLineStringStyle().setColor(Color.parseColor("#9a12b3"));
             layerM.getDefaultLineStringStyle().setWidth(15);
-//            assertEquals(Color.BLUE, layerM.getDefaultLineStringStyle().getColor());
+          //  assertEquals(Color.BLUE, layerM.getDefaultLineStringStyle().getColor());
 
             GeoJsonLayer layerK = new GeoJsonLayer(getMap(), R.raw.route_k, this);
             layerK.getDefaultLineStringStyle().setColor(Color.parseColor("#2b390e"));
             layerK.getDefaultLineStringStyle().setWidth(15);
-//            assertEquals(Color.BLUE, layerM.getDefaultLineStringStyle().getColor());
+          //  assertEquals(Color.BLUE, layerM.getDefaultLineStringStyle().getColor());
 
             addGeoJsonLayerToMap(layerM);
             addGeoJsonLayerToMap(layerK);
+
         } catch (IOException e) {
             Log.e(mLogTag, "GeoJSON file could not be read");
         } catch (JSONException e) {
