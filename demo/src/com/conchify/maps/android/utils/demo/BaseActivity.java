@@ -1,19 +1,3 @@
-/*
- * Copyright 2013 Google Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package com.conchify.maps.android.utils.demo;
 
 import android.Manifest;
@@ -32,6 +16,7 @@ import com.google.android.gms.location.places.AutocompleteFilter;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlaceAutocompleteFragment;
 import com.google.android.gms.location.places.ui.PlaceSelectionListener;
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -45,16 +30,12 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public abstract class BaseActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-//    private CheckBox mMyLocationButtonCheckbox;
-//    private CheckBox mMyLocationLayerCheckbox;
 
     private static final String FINE_LOCATION = Manifest.permission.ACCESS_FINE_LOCATION;
     private static final String COURSE_LOCATION = Manifest.permission.ACCESS_COARSE_LOCATION;
     private Boolean mLocationPermissionGranted = false;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1234;
     private final static String mLogTag = "BaseAct";
-    // private FusedLocationProviderClient mFusedLocationProviderClient;
-    //private static final float DEFAULT_ZOOM = 15f;
     private UiSettings mUiSettings;
 
     private PlaceAutocompleteFragment placeAutocompleteFragment;
@@ -85,8 +66,7 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
                     marker.remove();
                 }
                 marker = mMap.addMarker(new MarkerOptions().position(latLngLoc).title(place.getName().toString()));
-                mMap.animateCamera(CameraUpdateFactory.zoomTo(12),2000,null);
-//                mMap.moveCamera();
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(marker.getPosition(), 16));
             }
 
             @Override
@@ -115,25 +95,13 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
         if (mMap != null) {
             return;
         }
-        // Log.d(m)
-
         mMap = map;
 
         mUiSettings = mMap.getUiSettings();
 
-        // if (mLocationPermissionGranted) {
-        //   getDeviceLocation();
-
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this,
                 Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            // ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
             return;
         }
 
@@ -145,17 +113,6 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
         
 
         mMap.setMyLocationEnabled(true);
-
-//        mMap.getUiSettings().setCompassEnabled(true);
-//        mMap.setMyLocationEnabled(true);
-//        mUiSettings.setMapToolbarEnabled(true);
- //       mUi
-        //   mUiSettings.
-
-//        mMap.setMyLocationEnabled(true);
-        // mMap.
-        // mUiSettings.setScrollGesturesEnabled(true);
-
 
         try {
             boolean success = mMap.setMapStyle(
@@ -170,14 +127,14 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
             Log.e(TAG, "Can't find style. Error: ", e);
         }
 
-        startDemo();
+        startApp();
     }
 
     private void setUpMap() {
         ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMapAsync(this);
     }
 
-    protected abstract void startDemo();
+    protected abstract void startApp();
 
     protected GoogleMap getMap() {
         return mMap;
@@ -226,74 +183,10 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
                     mLocationPermissionGranted = true;
                     //Initialize Map
 
-                    startDemo();
+                    startApp();
 
                 }
             }
         }
     }
-
-//    public final boolean isCompassEnabled(){
-//        return mUiSettings.isCompassEnabled();
-//    }
-
-//    private void getDeviceLocation() {
-//        Log.d(mLogTag, "getDeviceLocation: searching current loc");
-//        mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
-//
-//        try {
-//            if (mLocationPermissionGranted) {
-//                final Task location = mFusedLocationProviderClient.getLastLocation();
-//                location.addOnCompleteListener(new OnCompleteListener() {
-//                    @Override
-//                    public void onComplete(@NonNull Task task) {
-//                        if (task.isSuccessful()) {
-//                            Log.d(mLogTag, "onComplete: found loc");
-//                            Location currentLocation = (Location) task.getResult();
-//
-//                            moveCamera(new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude()), DEFAULT_ZOOM);
-//                        } else {
-//                            Log.d(mLogTag, "onComplete: connection is null");
-//                            Toast.makeText(BaseActivity.this, "unable to get current location", Toast.LENGTH_SHORT).show();
-//                        }
-//                    }
-//                });
-//            }
-//        } catch (SecurityException e) {
-//            Log.e(mLogTag, "getDeviceLocation: SecurityException: " + e.getMessage());
-//        }
-//
-//    }
-
-//    private void moveCamera(LatLng latLng, float zoom) {
-//        Log.d(mLogTag, "Moving to: " + latLng.latitude + ", lng: " + latLng.longitude);
-//        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, zoom));
-//    }
-
-//    public void setCompassEnabled(View v) {
-
-
-        // Enables/disables the compass (icon in the top-left for LTR locale or top-right for RTL
-
-        // locale that indicates the orientation of the map).
-
-//        mUiSettings.setCompassEnabled(((CheckBox) v).isChecked());
-//        ((CheckBox) v).setButtonDrawable(View.GONE);
-//    }
-
-//    private boolean checkReady() {
-//
-//        if (mMap == null) {
-//
-//            Toast.makeText(this, "LoL", Toast.LENGTH_SHORT).show();
-//
-//            return false;
-//
-//        }
-//
-//        return true;
-//
-//    }
-
-
 }
