@@ -31,8 +31,8 @@ public class GeoJsonActivity extends BaseActivity implements OnMapReadyCallback 
     }
 
     @Override
-    protected void startDemo() {
-        getMap().setMinZoomPreference(12);
+    protected void startApp() {
+//        getMap().setMinZoomPreference(12);
         retrieveFileFromResource();
         //getLocationPermission();
         //retrieveFileFromResource();
