@@ -32,10 +32,8 @@ public class GeoJsonActivity extends BaseActivity implements OnMapReadyCallback 
 
     @Override
     protected void startApp() {
-//        getMap().setMinZoomPreference(12);
         retrieveFileFromResource();
         //getLocationPermission();
-        //retrieveFileFromResource();
     }
 
     private void retrieveFileFromUrl() {
@@ -44,8 +42,6 @@ public class GeoJsonActivity extends BaseActivity implements OnMapReadyCallback 
 
     public void retrieveFileFromResource() {
         try {
-            // Hay que crear metodo para colorear caya capa de geojson.
-            // https://github.com/googlemaps/android-maps-utils/blob/3b8520ed07199074e5e7124872b52b0c4f85ff90/library/tests/src/com/google/maps/android/data/geojson/GeoJsonLayerTest.java#L61
             GeoJsonLayer layerM = new GeoJsonLayer(getMap(), R.raw.route_m, this);
             layerM.getDefaultLineStringStyle().setColor(Color.parseColor("#9a12b3"));
 
@@ -102,13 +98,6 @@ public class GeoJsonActivity extends BaseActivity implements OnMapReadyCallback 
         }
     }
 
-//    GeoJsonLayer mLayer;
-//
-//    public void DefaultLineStringStyle() throws Exception {
-//        mLayer.getDefaultLineStringStyle().setColor(Color.BLUE);
-//        assertEquals(Color.BLUE, mLayer.getDefaultLineStringStyle().getColor());
-//    }
-
 
     private class DownloadGeoJsonFile extends AsyncTask<String, Void, GeoJsonLayer> {
 
@@ -153,6 +142,7 @@ public class GeoJsonActivity extends BaseActivity implements OnMapReadyCallback 
 
         layer.addLayerToMap();
         getMap().moveCamera(CameraUpdateFactory.newLatLng(new LatLng(19.457258, -70.6888)));
+        getMap().animateCamera(CameraUpdateFactory.zoomTo(12),2000,null);
         // Demonstrate receiving features via GeoJsonLayer clicks.
         layer.setOnFeatureClickListener(new GeoJsonLayer.GeoJsonOnFeatureClickListener() {
             @Override
