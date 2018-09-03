@@ -36,9 +36,6 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
     private Boolean mLocationPermissionGranted = false;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1234;
     private final static String mLogTag = "BaseAct";
-    private UiSettings mUiSettings;
-
-    private PlaceAutocompleteFragment placeAutocompleteFragment;
 
     Marker marker;
 
@@ -53,7 +50,7 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
 
-        placeAutocompleteFragment = (PlaceAutocompleteFragment)getFragmentManager().findFragmentById(R.id.place_autocomplete_fragment);
+        PlaceAutocompleteFragment placeAutocompleteFragment = (PlaceAutocompleteFragment) getFragmentManager().findFragmentById(R.id.place_autocomplete_fragment);
 
         placeAutocompleteFragment.setFilter(new AutocompleteFilter.Builder().setCountry("DO").build());
 
@@ -97,7 +94,7 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
         }
         mMap = map;
 
-        mUiSettings = mMap.getUiSettings();
+        UiSettings mUiSettings;
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this,
