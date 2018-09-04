@@ -18,15 +18,16 @@ git@github.com:masires/conchify.git
 * [Icon Generator](https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html): icon generator (lol).
 
 
-## To-Do
+## To-Do for v1.0
 * Add UI to MainActivity.
 * Allow user to change map style manually.
 * Static maps with individual maps and related info.
-* Add UI controllers (compass, toolbar, search bar).
+* ~Add UI controllers (compass, toolbar, location, search bar)~.
 * Refactor GeoJson loading method; create route legend loading method.
 * GeoJson layer legend (show route when clicking on layer, or show textbox with available routes).
-* Make sure all GeoJson layer colors are ADA compliant.
-* Add "Quejas" form.
+* ~Make sure all GeoJson layer colors are ADA compliant~.
+* Add GeoJson template with points of interest (route's offices).
+* ~Add "Quejas" form~.
 * Connect "Quejas" form to MySQL.
 
 
