@@ -49,11 +49,8 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
-
         PlaceAutocompleteFragment placeAutocompleteFragment = (PlaceAutocompleteFragment) getFragmentManager().findFragmentById(R.id.place_autocomplete_fragment);
-
         placeAutocompleteFragment.setFilter(new AutocompleteFilter.Builder().setCountry("DO").build());
-
         placeAutocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
             @Override
             public void onPlaceSelected(Place place) {
@@ -103,12 +100,9 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
         }
 
         mUiSettings = mMap.getUiSettings();
-
         mUiSettings.setZoomControlsEnabled(true);
         mUiSettings.setCompassEnabled(true);
         mUiSettings.setMyLocationButtonEnabled(true);
-        
-
         mMap.setMyLocationEnabled(true);
 
         try {
