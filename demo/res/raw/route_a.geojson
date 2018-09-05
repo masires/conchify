@@ -2196,7 +2196,9 @@
           ]
         ]
       },
-      "properties": {}
+      "properties": {
+        "title": "A"
+      }
     }
   ]
 }

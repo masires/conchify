@@ -148,7 +148,7 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
             if (ContextCompat.checkSelfPermission(this.getApplicationContext(),
                     COURSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
                 mLocationPermissionGranted = true;
-                Toast.makeText(this, "Map Ready", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Mapa Listo", Toast.LENGTH_SHORT).show();
                 getMap();
             } else {
                 ActivityCompat.requestPermissions(this, permissions, LOCATION_PERMISSION_REQUEST_CODE);
