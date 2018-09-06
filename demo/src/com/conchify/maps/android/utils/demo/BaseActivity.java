@@ -16,7 +16,6 @@ import com.google.android.gms.location.places.AutocompleteFilter;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlaceAutocompleteFragment;
 import com.google.android.gms.location.places.ui.PlaceSelectionListener;
-import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -36,9 +35,6 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
     private Boolean mLocationPermissionGranted = false;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1234;
     private final static String mLogTag = "BaseAct";
-    private UiSettings mUiSettings;
-
-    private PlaceAutocompleteFragment placeAutocompleteFragment;
 
     Marker marker;
 
@@ -53,6 +49,25 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
 
+        PlaceAutocompleteFragment placeAutocompleteFragment = (PlaceAutocompleteFragment) getFragmentManager().findFragmentById(R.id.place_autocomplete_fragment);
+        placeAutocompleteFragment.setFilter(new AutocompleteFilter.Builder().setCountry("DO").build());
+        placeAutocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
+            @Override
+            public void onPlaceSelected(Place place) {
+                final LatLng latLngLoc = place.getLatLng();
+
+                if (marker != null) {
+                    marker.remove();
+                }
+                marker = mMap.addMarker(new MarkerOptions().position(latLngLoc).title(place.getName().toString()));
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(marker.getPosition(), 16));
+            }
+
+            @Override
+            public void onError(Status status) {
+                Toast.makeText(BaseActivity.this, "" + status.toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
 
         SupportMapFragment mapFragment =
                 (SupportMapFragment) getSupportFragmentManager()
@@ -76,7 +91,7 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
         }
         mMap = map;
 
-        mUiSettings = mMap.getUiSettings();
+        UiSettings mUiSettings;
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this,
@@ -85,11 +100,9 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
         }
 
         mUiSettings = mMap.getUiSettings();
-
         mUiSettings.setZoomControlsEnabled(true);
         mUiSettings.setCompassEnabled(true);
         mUiSettings.setMyLocationButtonEnabled(true);
-
 
         mMap.setMyLocationEnabled(true);
 
@@ -110,27 +123,7 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
     }
 
     private void setUpMap() {
-        placeAutocompleteFragment = (PlaceAutocompleteFragment) getFragmentManager().findFragmentById(R.id.place_autocomplete_fragment);
 
-        placeAutocompleteFragment.setFilter(new AutocompleteFilter.Builder().setCountry("DO").build());
-
-        placeAutocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
-            @Override
-            public void onPlaceSelected(Place place) {
-                final LatLng latLngLoc = place.getLatLng();
-
-                if (marker != null) {
-                    marker.remove();
-                }
-                marker = mMap.addMarker(new MarkerOptions().position(latLngLoc).title(place.getName().toString()));
-                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(marker.getPosition(), 16));
-            }
-
-            @Override
-            public void onError(Status status) {
-                Toast.makeText(BaseActivity.this, "" + status.toString(), Toast.LENGTH_SHORT).show();
-            }
-        });
         ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMapAsync(this);
 
     }
@@ -152,7 +145,7 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
             if (ContextCompat.checkSelfPermission(this.getApplicationContext(),
                     COURSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
                 mLocationPermissionGranted = true;
-                Toast.makeText(this, "Map Ready", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Mapa Listo", Toast.LENGTH_SHORT).show();
                 getMap();
             } else {
                 ActivityCompat.requestPermissions(this, permissions, LOCATION_PERMISSION_REQUEST_CODE);

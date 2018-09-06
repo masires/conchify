@@ -1,139 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <!--android:orientation="vertical"-->
-    <!--&gt;-->
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-
-    <LinearLayout
-        android:id="@+id/topPanel"
+    <fragment
+        android:id="@+id/place_autocomplete_fragment"
+        android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <fragment
-            android:id="@+id/place_autocomplete_fragment"
-            android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:layout_weight="5" />
-        <!--android:name="com.google.android.gms.location.places."-->
-
-    </LinearLayout>
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:layout_weight="0.35" />
 
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/topPanel"
+        android:layout_height="0dp"
+        android:layout_weight="5"
         tools:layout="@layout/geojson" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:background="#f6f6f6"
+        android:orientation="horizontal">
 
-    <!--android:layout_alignParentTop="true"-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#16a085">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="A"
+                android:textAlignment="center"
+                android:textColor="@android:color/white" />
 
-    <!--<AutoCompleteTextView-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:layout_centerVertical="true"-->
-    <!--android:textSize="15sp"-->
-    <!--android:textColor="#000"-->
-    <!--android:id="@+id/input_search"-->
-    <!--android:background="@null"-->
-    <!--android:singleLine="true"-->
-    <!--android:hint="Enter Address, City or Zip Code"-->
-    <!--android:imeOptions="actionSearch"-->
-    <!--/>-->
-    <!--android:layout_toRightOf="@+"-->
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#d47500">
 
-    <!--<ScrollView-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="CA"
+                android:textAlignment="center"
+                android:textColor="@android:color/white" />
 
-    <!--android:layout_width="wrap_content"-->
+        </LinearLayout>
 
-    <!--android:layout_height="175dp"-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#4f5a65">
 
-    <!--android:layout_alignParentBottom="true"-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="F"
+                android:textAlignment="center"
+                android:textColor="@android:color/white" />
 
-    <!--android:layout_alignParentLeft="true"-->
+        </LinearLayout>
 
-    <!--android:layout_alignParentStart="true">-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#804600">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="H"
+                android:textAlignment="center"
+                android:textColor="@android:color/white" />
 
-    <!--<LinearLayout-->
+        </LinearLayout>
 
-    <!--android:layout_width="wrap_content"-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#cf000f">
 
-    <!--android:layout_height="wrap_content"-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="HB"
+                android:textAlignment="center"
+                android:textColor="@android:color/white" />
 
-    <!--android:background="#fff"-->
-    <!--android:visibility="invisible"-->
-    <!--android:orientation="vertical"-->
-    <!--android:paddingEnd="5dp"-->
+        </LinearLayout>
 
-    <!--android:paddingRight="5dp">-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#2b390e">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="K"
+                android:textAlignment="center"
+                android:textColor="@android:color/white" />
 
-    <!--<CheckBox-->
-    <!--android:id="@+id/compass_toggle"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_weight="1"-->
-    <!--android:checked="true"-->
-    <!--android:onClick="setCompassEnabled"-->
-    <!--android:visibility="invisible"/>-->
-    <!--/>/ android:text="@string/compass" />-->
+        </LinearLayout>
 
-    <!--</LinearLayout>-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#9a12b3">
 
-    <!--</ScrollView>-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="M"
+                android:textAlignment="center"
+                android:textColor="@android:color/white" />
 
-    <!--<LinearLayout-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="25dp"-->
-    <!--android:layout_alignParentTop="true"-->
-    <!--android:background="#7FFFFFFF"-->
-    <!--android:orientation="horizontal">-->
+        </LinearLayout>
 
-    <!--<LinearLayout-->
-    <!--android:layout_width="0dp"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:layout_weight="1"-->
-    <!--android:background="@android:color/holo_red_dark">-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#2e343b">
 
-    <!--<TextView-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:gravity="center"-->
-    <!--android:text="K"-->
-    <!--android:textAlignment="center"-->
-    <!--android:textColor="@android:color/white" />-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="N"
+                android:textAlignment="center"
+                android:textColor="@android:color/white" />
 
-    <!--</LinearLayout>-->
+        </LinearLayout>
 
-    <!--<LinearLayout-->
-    <!--android:layout_width="0dp"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:layout_weight="1"-->
-    <!--android:background="@android:color/holo_blue_dark">-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#96281b">
 
-    <!--<TextView-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:gravity="center"-->
-    <!--android:text="M"-->
-    <!--android:textAlignment="center"-->
-    <!--android:textColor="@android:color/white" />-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="U"
+                android:textAlignment="center"
+                android:textColor="@android:color/white" />
 
-    <!--</LinearLayout>-->
+        </LinearLayout>
 
+    </LinearLayout>
 
-    <!--</LinearLayout>-->
-
-
-</RelativeLayout>
+</LinearLayout>

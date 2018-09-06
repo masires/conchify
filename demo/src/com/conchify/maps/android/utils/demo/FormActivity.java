@@ -5,21 +5,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-public class QuejasActivity extends Activity {
+public class FormActivity extends Activity {
 
     private final static String mLogTag = "GeoJsonDemo";
 
     EditText UsernameEt, PasswordEt;
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.quejas);
+        setContentView(R.layout.form);
         UsernameEt = (EditText) findViewById(R.id.etUserName);
         PasswordEt = (EditText) findViewById(R.id.etPassword);
     }
-
 
     public void OnLogin(View view) {
         String username = UsernameEt.getText().toString();
@@ -28,7 +26,7 @@ public class QuejasActivity extends Activity {
 
 
         BackgroundWorker backgroundWorker = new BackgroundWorker(this);
-        backgroundWorker.execute(type,username, password);
+        backgroundWorker.execute(type, username, password);
     }
 
 }

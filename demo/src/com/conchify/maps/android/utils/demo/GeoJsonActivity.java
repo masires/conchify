@@ -9,7 +9,9 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.maps.android.data.Feature;
+import com.google.maps.android.data.geojson.GeoJsonFeature;
 import com.google.maps.android.data.geojson.GeoJsonLayer;
+import com.google.maps.android.data.geojson.GeoJsonLineStringStyle;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -22,7 +24,7 @@ import java.net.URL;
 
 public class GeoJsonActivity extends BaseActivity implements OnMapReadyCallback {
 
-    private final static String mLogTag = "GeoJsonDemo";
+    private final static String mLogTag = "GeoJson";
 
 
     protected int getLayoutId() {
@@ -35,64 +37,28 @@ public class GeoJsonActivity extends BaseActivity implements OnMapReadyCallback 
         //getLocationPermission();
     }
 
-
     private void retrieveFileFromUrl() {
         new DownloadGeoJsonFile().execute(getString(R.string.geojson_url));
     }
 
     public void retrieveFileFromResource() {
         try {
-            GeoJsonLayer layerM = new GeoJsonLayer(getMap(), R.raw.route_m, this);
-            layerM.getDefaultLineStringStyle().setColor(Color.parseColor("#9a12b3"));
-
-//            layerM.getDefaultLineStringStyle().setWidth(15);
-//            assertEquals(Color.BLUE, layerM.getDefaultLineStringStyle().getColor());
-
-            GeoJsonLayer layerK = new GeoJsonLayer(getMap(), R.raw.route_k, this);
-            layerK.getDefaultLineStringStyle().setColor(Color.parseColor("#2b390e"));
-//            layerK.getDefaultLineStringStyle().setWidth(15);
-//            assertEquals(Color.BLUE, layerM.getDefaultLineStringStyle().getColor());
-            layerM.getDefaultLineStringStyle().setWidth(15);
-            //  assertEquals(Color.BLUE, layerM.getDefaultLineStringStyle().getColor());
-
-
-            GeoJsonLayer layerA = new GeoJsonLayer(getMap(), R.raw.route_a, this);
-            layerA.getDefaultLineStringStyle().setColor(Color.parseColor("#16a085"));
-//            layerA.getDefaultLineStringStyle().setWidth(15);
-            GeoJsonLayer layerCA = new GeoJsonLayer(getMap(), R.raw.route_ca, this);
-            layerCA.getDefaultLineStringStyle().setColor(Color.parseColor("#d47500"));
-//            layerCA.getDefaultLineStringStyle().setWidth(15);
-            GeoJsonLayer layerF = new GeoJsonLayer(getMap(), R.raw.route_f, this);
-            layerF.getDefaultLineStringStyle().setColor(Color.parseColor("#4f5a65"));
-//            layerF.getDefaultLineStringStyle().setWidth(15);
-            GeoJsonLayer layerHB = new GeoJsonLayer(getMap(), R.raw.route_hb, this);
-            layerHB.getDefaultLineStringStyle().setColor(Color.parseColor("#cf000f"));
-//            layerHB.getDefaultLineStringStyle().setWidth(15);
-            GeoJsonLayer layerU = new GeoJsonLayer(getMap(), R.raw.route_u, this);
-            layerU.getDefaultLineStringStyle().setColor(Color.parseColor("#96281b"));
-//            layerU.getDefaultLineStringStyle().setWidth(15);
-            GeoJsonLayer layerN = new GeoJsonLayer(getMap(), R.raw.route_n, this);
-            layerN.getDefaultLineStringStyle().setColor(Color.parseColor("#2e343b"));
-//            layerN.getDefaultLineStringStyle().setWidth(15);
-            GeoJsonLayer layerH = new GeoJsonLayer(getMap(), R.raw.route_h, this);
-            layerH.getDefaultLineStringStyle().setColor(Color.parseColor("#804600"));
-//            layerH.getDefaultLineStringStyle().setWidth(15);
-
-            addGeoJsonLayerToMap(layerM);
-            addGeoJsonLayerToMap(layerK);
-            addGeoJsonLayerToMap(layerA);
-            addGeoJsonLayerToMap(layerCA);
-            addGeoJsonLayerToMap(layerF);
-            addGeoJsonLayerToMap(layerHB);
-            addGeoJsonLayerToMap(layerU);
-            addGeoJsonLayerToMap(layerN);
-            addGeoJsonLayerToMap(layerH);
-
-
+            GeoJsonLayer layerAll = new GeoJsonLayer(getMap(), R.raw.routes_all_test, this);
+            addGeoJsonLayerToMap(layerAll);
         } catch (IOException e) {
-            Log.e(mLogTag, "GeoJSON file could not be read");
+            Log.e(mLogTag, "Archivo GeoJSON no pudo ser leido");
         } catch (JSONException e) {
-            Log.e(mLogTag, "GeoJSON file could not be converted to a JSONObject");
+            Log.e(mLogTag, "Archivo GeoJSON no pudo ser convertido a JSONObject");
+        }
+    }
+
+    private void addColorsToLayers(GeoJsonLayer layer) {
+        for (GeoJsonFeature feature : layer.getFeatures()) {
+            if (feature.getProperty("title") != null && feature.hasProperty("hex")) {
+                GeoJsonLineStringStyle layerStyle = new GeoJsonLineStringStyle();
+                layerStyle.setColor(Color.parseColor(feature.getProperty("hex")));
+                feature.setLineStringStyle(layerStyle);
+            }
         }
     }
 
@@ -102,7 +68,6 @@ public class GeoJsonActivity extends BaseActivity implements OnMapReadyCallback 
         @Override
         protected GeoJsonLayer doInBackground(String... params) {
             try {
-                // Open a stream from the URL
                 InputStream stream = new URL(params[0]).openStream();
 
                 String line;
@@ -110,19 +75,17 @@ public class GeoJsonActivity extends BaseActivity implements OnMapReadyCallback 
                 BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
 
                 while ((line = reader.readLine()) != null) {
-                    // Read and save each line of the stream
                     result.append(line);
                 }
 
-                // Close the stream
                 reader.close();
                 stream.close();
 
                 return new GeoJsonLayer(getMap(), new JSONObject(result.toString()));
             } catch (IOException e) {
-                Log.e(mLogTag, "GeoJSON file could not be read");
+                Log.e(mLogTag, "Archivo GeoJSON no pudo ser leido");
             } catch (JSONException e) {
-                Log.e(mLogTag, "GeoJSON file could not be converted to a JSONObject");
+                Log.e(mLogTag, "Archivo GeoJSON no pudo ser convertido a JSONObject");
             }
             return null;
         }
@@ -138,23 +101,23 @@ public class GeoJsonActivity extends BaseActivity implements OnMapReadyCallback 
 
     private void addGeoJsonLayerToMap(GeoJsonLayer layer) {
 
+        addColorsToLayers(layer);
         layer.addLayerToMap();
         getMap().moveCamera(CameraUpdateFactory.newLatLng(new LatLng(19.457258, -70.6888)));
         getMap().animateCamera(CameraUpdateFactory.zoomTo(12), 2000, null);
-        // Demonstrate receiving features via GeoJsonLayer clicks.
         layer.setOnFeatureClickListener(new GeoJsonLayer.GeoJsonOnFeatureClickListener() {
             @Override
             public void onFeatureClick(Feature feature) {
                 Toast.makeText(GeoJsonActivity.this,
-                        "Feature clicked: " + feature.getProperty("title"),
+                        "Ruta seleccionada: " + feature.getProperty("title"),
                         Toast.LENGTH_SHORT).show();
             }
 
         });
-
     }
-
-
 }
+
+
+//EVERYTHING RUNS HERE!!!
 
 
