@@ -15,8 +15,8 @@ public class FormActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.form);
-        UsernameEt = (EditText) findViewById(R.id.etUserName);
-        PasswordEt = (EditText) findViewById(R.id.etPassword);
+        UsernameEt = findViewById(R.id.etUserName);
+        PasswordEt = findViewById(R.id.etPassword);
     }
 
     public void OnLogin(View view) {

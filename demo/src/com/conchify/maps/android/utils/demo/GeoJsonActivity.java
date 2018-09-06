@@ -103,8 +103,8 @@ public class GeoJsonActivity extends BaseActivity implements OnMapReadyCallback 
 
         addColorsToLayers(layer);
         layer.addLayerToMap();
-        getMap().moveCamera(CameraUpdateFactory.newLatLng(new LatLng(19.457258, -70.6888)));
-        getMap().animateCamera(CameraUpdateFactory.zoomTo(12), 2000, null);
+        getMap().moveCamera(CameraUpdateFactory.newLatLng(new LatLng(19.457258,-70.6888)));
+        getMap().animateCamera(CameraUpdateFactory.zoomTo(12),2000,null);
         layer.setOnFeatureClickListener(new GeoJsonLayer.GeoJsonOnFeatureClickListener() {
             @Override
             public void onFeatureClick(Feature feature) {
@@ -116,8 +116,4 @@ public class GeoJsonActivity extends BaseActivity implements OnMapReadyCallback 
         });
     }
 }
-
-
-//EVERYTHING RUNS HERE!!!
-
 

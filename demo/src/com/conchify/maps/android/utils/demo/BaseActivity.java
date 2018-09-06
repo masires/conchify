@@ -103,7 +103,6 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
         mUiSettings.setZoomControlsEnabled(true);
         mUiSettings.setCompassEnabled(true);
         mUiSettings.setMyLocationButtonEnabled(true);
-
         mMap.setMyLocationEnabled(true);
 
         try {

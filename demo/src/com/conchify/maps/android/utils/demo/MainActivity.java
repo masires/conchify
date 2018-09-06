@@ -2,6 +2,7 @@ package com.conchify.maps.android.utils.demo;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +19,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mListView = (ViewGroup) findViewById(R.id.list);
 
         mapAct("Trayectoria de Conchos", GeoJsonActivity.class);
-        mapAct("Quejas de Conductores de Concho", FormActivity.class);
+        mapAct("Quejas de Conductores de Conchos", FormActivity.class);
 
     }
 
@@ -27,6 +28,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         b.setLayoutParams(layoutParams);
         b.setText(actName);
+//        b.setTextColor(Color.parseColor("hex"));
+//        b.setBackgroundColor(Color.parseColor("hex"));
         b.setTag(activityClass);
         b.setOnClickListener(this);
         mListView.addView(b);
