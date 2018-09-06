@@ -2216,7 +2216,9 @@
           ]
         ]
       },
-      "properties": {}
+      "properties": {
+        "title": "CA"
+      }
     }
   ]
 }
