@@ -18,6 +18,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mListView = (ViewGroup) findViewById(R.id.list);
 
         mapAct("Trayectoria de Conchos", GeoJsonActivity.class);
+        mapAct("Quejas de Conductores de Concho", QuejasActivity.class);
+
     }
 
     private void mapAct(String actName, Class<? extends Activity> activityClass) {

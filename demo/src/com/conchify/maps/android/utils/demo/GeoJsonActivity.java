@@ -25,7 +25,6 @@ public class GeoJsonActivity extends BaseActivity implements OnMapReadyCallback 
     private final static String mLogTag = "GeoJsonDemo";
 
 
-
     protected int getLayoutId() {
         return R.layout.geojson;
     }
@@ -35,6 +34,7 @@ public class GeoJsonActivity extends BaseActivity implements OnMapReadyCallback 
         retrieveFileFromResource();
         //getLocationPermission();
     }
+
 
     private void retrieveFileFromUrl() {
         new DownloadGeoJsonFile().execute(getString(R.string.geojson_url));
@@ -53,10 +53,9 @@ public class GeoJsonActivity extends BaseActivity implements OnMapReadyCallback 
 //            layerK.getDefaultLineStringStyle().setWidth(15);
 //            assertEquals(Color.BLUE, layerM.getDefaultLineStringStyle().getColor());
             layerM.getDefaultLineStringStyle().setWidth(15);
-          //  assertEquals(Color.BLUE, layerM.getDefaultLineStringStyle().getColor());
+            //  assertEquals(Color.BLUE, layerM.getDefaultLineStringStyle().getColor());
 
 
-          
             GeoJsonLayer layerA = new GeoJsonLayer(getMap(), R.raw.route_a, this);
             layerA.getDefaultLineStringStyle().setColor(Color.parseColor("#16a085"));
 //            layerA.getDefaultLineStringStyle().setWidth(15);
@@ -81,7 +80,6 @@ public class GeoJsonActivity extends BaseActivity implements OnMapReadyCallback 
 
             addGeoJsonLayerToMap(layerM);
             addGeoJsonLayerToMap(layerK);
-
             addGeoJsonLayerToMap(layerA);
             addGeoJsonLayerToMap(layerCA);
             addGeoJsonLayerToMap(layerF);
@@ -142,7 +140,7 @@ public class GeoJsonActivity extends BaseActivity implements OnMapReadyCallback 
 
         layer.addLayerToMap();
         getMap().moveCamera(CameraUpdateFactory.newLatLng(new LatLng(19.457258, -70.6888)));
-        getMap().animateCamera(CameraUpdateFactory.zoomTo(12),2000,null);
+        getMap().animateCamera(CameraUpdateFactory.zoomTo(12), 2000, null);
         // Demonstrate receiving features via GeoJsonLayer clicks.
         layer.setOnFeatureClickListener(new GeoJsonLayer.GeoJsonOnFeatureClickListener() {
             @Override
