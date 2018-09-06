@@ -48,6 +48,7 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
+
         PlaceAutocompleteFragment placeAutocompleteFragment = (PlaceAutocompleteFragment) getFragmentManager().findFragmentById(R.id.place_autocomplete_fragment);
         placeAutocompleteFragment.setFilter(new AutocompleteFilter.Builder().setCountry("DO").build());
         placeAutocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
@@ -55,7 +56,7 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
             public void onPlaceSelected(Place place) {
                 final LatLng latLngLoc = place.getLatLng();
 
-                if (marker != null){
+                if (marker != null) {
                     marker.remove();
                 }
                 marker = mMap.addMarker(new MarkerOptions().position(latLngLoc).title(place.getName().toString()));
@@ -64,7 +65,7 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
 
             @Override
             public void onError(Status status) {
-                Toast.makeText(BaseActivity.this,"" + status.toString(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(BaseActivity.this, "" + status.toString(), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -102,6 +103,7 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
         mUiSettings.setZoomControlsEnabled(true);
         mUiSettings.setCompassEnabled(true);
         mUiSettings.setMyLocationButtonEnabled(true);
+
         mMap.setMyLocationEnabled(true);
 
         try {
@@ -121,7 +123,9 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
     }
 
     private void setUpMap() {
+
         ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMapAsync(this);
+
     }
 
     protected abstract void startApp();
