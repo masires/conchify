@@ -5,26 +5,74 @@
     android:orientation="vertical">
 
     <EditText
-        android:id="@+id/etUserName"
+        android:id="@+id/etNumero_placa_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Username"
+        android:hint="Placa ID"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/etNumero_carnet_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Carnet ID"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/etNumero_franja_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Franja ID"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/etComentario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Comentarios" />
+
+    <EditText
+        android:id="@+id/etTipo_Queja"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Tipo de Queja"
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/etPassword"
+        android:id="@+id/etEstado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword" />
+        android:hint="Estado"
+        android:inputType="textPersonName" />
 
-    <Button
-        android:id="@+id/btnLogin"
+    <EditText
+        android:id="@+id/etComentario_cierre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="OnLogin"
-        android:text="Login" />
+        android:ems="10"
+        android:hint="Comentario Cierre"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etAccion_diciplinaria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Accion Diciplinaria"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btnSendFormInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="OnFormInfo"
+        android:text="Enviar" />
+
 
 </LinearLayout>

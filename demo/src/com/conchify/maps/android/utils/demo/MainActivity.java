@@ -40,4 +40,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         Class activityClass = (Class) view.getTag();
         startActivity(new Intent(this, activityClass));
     }
+
+
 }
