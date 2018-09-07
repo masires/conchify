@@ -43,7 +43,7 @@ public class GeoJsonActivity extends BaseActivity implements OnMapReadyCallback 
 
     public void retrieveFileFromResource() {
         try {
-            GeoJsonLayer layerAll = new GeoJsonLayer(getMap(), R.raw.routes_all_test, this);
+            GeoJsonLayer layerAll = new GeoJsonLayer(getMap(), R.raw.routes_all, this);
             addGeoJsonLayerToMap(layerAll);
         } catch (IOException e) {
             Log.e(mLogTag, "Archivo GeoJSON no pudo ser leido");
