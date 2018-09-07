@@ -29,7 +29,7 @@ git@github.com:masires/conchify.git
 * ~Make sure all GeoJson layer colors are ADA compliant~.
 * Add GeoJson template with points of interest (route's offices).
 * ~Add "Quejas" form~.
-* Connect "Quejas" form to MySQL.
+* ~Connect "Quejas" form to MySQL~.
 
 
 ## Maintainers
