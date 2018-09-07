@@ -45,6 +45,22 @@
 
         </LinearLayout>
 
+        <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="#bf55ec">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center"-->
+                <!--android:text="B"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@android:color/white" />-->
+
+        <!--</LinearLayout>-->
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -61,53 +77,71 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#4f5a65">
+        <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="#4f5a65">-->
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="F"
-                android:textAlignment="center"
-                android:textColor="@android:color/white" />
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center"-->
+                <!--android:text="F"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@android:color/white" />-->
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#804600">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="H"
-                android:textAlignment="center"
-                android:textColor="@android:color/white" />
-
-        </LinearLayout>
+        <!--</LinearLayout>-->
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#cf000f">
+            android:background="#555344">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="HB"
+                android:text="G"
                 android:textAlignment="center"
                 android:textColor="@android:color/white" />
 
         </LinearLayout>
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="#804600">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center"-->
+                <!--android:text="H"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@android:color/white" />-->
+
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="#cf000f">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center"-->
+                <!--android:text="HB"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@android:color/white" />-->
+
+        <!--</LinearLayout>-->
+
+
 
         <LinearLayout
             android:layout_width="0dp"
@@ -141,37 +175,85 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#2e343b">
+        <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="#2e343b">-->
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="N"
-                android:textAlignment="center"
-                android:textColor="@android:color/white" />
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center"-->
+                <!--android:text="N"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@android:color/white" />-->
 
-        </LinearLayout>
+        <!--</LinearLayout>-->
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#96281b">
+        <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="#aa2e00">-->
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="U"
-                android:textAlignment="center"
-                android:textColor="@android:color/white" />
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center"-->
+                <!--android:text="O"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@android:color/white" />-->
 
-        </LinearLayout>
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="#002a15">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center"-->
+                <!--android:text="PA"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@android:color/white" />-->
+
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="#96281b">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center"-->
+                <!--android:text="U"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@android:color/white" />-->
+
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="#436e43">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center"-->
+                <!--android:text="ZP"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@android:color/white" />-->
+
+        <!--</LinearLayout>-->
 
     </LinearLayout>
 
