@@ -112,10 +112,10 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
 
                             this, R.raw.style_json));
             if (!success) {
-                Log.e(TAG, "Style parsing failed.");
+                Log.e(TAG, "Análisis de estilo ha fallado.");
             }
         } catch (Resources.NotFoundException e) {
-            Log.e(TAG, "Can't find style. Error: ", e);
+            Log.e(TAG, "No se encontro estilo. Error: ", e);
         }
 
         startApp();
@@ -144,7 +144,7 @@ public abstract class BaseActivity extends FragmentActivity implements OnMapRead
             if (ContextCompat.checkSelfPermission(this.getApplicationContext(),
                     COURSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
                 mLocationPermissionGranted = true;
-                Toast.makeText(this, "Mapa Listo", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Aviso: varias rutas coinciden.", Toast.LENGTH_LONG).show();
                 getMap();
             } else {
                 ActivityCompat.requestPermissions(this, permissions, LOCATION_PERMISSION_REQUEST_CODE);

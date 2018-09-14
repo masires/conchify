@@ -16,7 +16,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        mListView = (ViewGroup) findViewById(R.id.list);
+        mListView = findViewById(R.id.list);
 
         mapAct("Trayectoria de Conchos", GeoJsonActivity.class);
         mapAct("Quejas de Conductores de Conchos", FormActivity.class);
