@@ -21,14 +21,14 @@ public class FormActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.form);
-        etNumero_placa_id = (EditText) findViewById(R.id.etNumero_placa_id);
-        etNumero_carnet_id = (EditText) findViewById(R.id.etNumero_carnet_id);
-        etNumero_franja_id = (EditText) findViewById(R.id.etNumero_franja_id);
-        etComentario = (EditText) findViewById(R.id.etComentario);
-        etTipo_Queja = (EditText) findViewById(R.id.etTipo_Queja);
-        etEstado = (EditText) findViewById(R.id.etEstado);
-        etComentario_cierra = (EditText) findViewById(R.id.etComentario_cierre);
-        etAccion_diciplinaria = (EditText) findViewById(R.id.etAccion_diciplinaria);
+        etNumero_placa_id = findViewById(R.id.etNumero_placa_id);
+        etNumero_carnet_id = findViewById(R.id.etNumero_carnet_id);
+        etNumero_franja_id = findViewById(R.id.etNumero_franja_id);
+        etComentario = findViewById(R.id.etComentario);
+        etTipo_Queja = findViewById(R.id.etTipo_Queja);
+        etEstado = findViewById(R.id.etEstado);
+        etComentario_cierra = findViewById(R.id.etComentario_cierre);
+        etAccion_diciplinaria = findViewById(R.id.etAccion_diciplinaria);
 
 
     }
