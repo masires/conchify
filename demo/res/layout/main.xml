@@ -7,6 +7,42 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:id="@+id/list"/>
+            android:id="@+id/list"
+            android:layout_margin="16dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/main_logo"/>
+
+        <TextView
+            android:id="@+id/text_view_id"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="35sp"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:paddingTop="25dp"
+            android:paddingBottom="50dp"/>
+
+        <Button
+            android:id="@+id/trayectoriaButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@android:color/white"
+            android:text="Trayectoria de Conchos"
+            android:layout_marginBottom="14dp"
+            android:background="@android:color/holo_blue_light"/>
+
+        <Button
+            android:id="@+id/quejasButon"
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Quejas de Conductores de Conchos"
+            android:background="@android:color/holo_blue_light"/>
+    </LinearLayout>
 
 </ScrollView>
