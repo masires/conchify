@@ -30,7 +30,6 @@ public class FormActivity extends Activity {
         etComentario_cierra = findViewById(R.id.etComentario_cierre);
         etAccion_diciplinaria = findViewById(R.id.etAccion_diciplinaria);
 
-
     }
 
     public void OnFormInfo(View view) {
