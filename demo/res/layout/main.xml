@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="#f6f6f6">
 
     <LinearLayout
         android:id="@+id/list"
@@ -31,40 +32,40 @@
         <Button
             android:id="@+id/trayectoriaButton"
             android:layout_width="300dp"
-            android:layout_height="match_parent"
+            android:layout_height="35dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="14dp"
-            android:background="@android:color/holo_blue_light"
+            android:background="#2972A8"
             android:text="Trayectoria de Conchos"
-            android:textColor="@android:color/white" />
+            android:textColor="#f6f6f6" />
 
         <Button
-            android:id="@+id/quejasButon"
+            android:id="@+id/quejasButton"
             android:layout_width="300dp"
-            android:layout_height="match_parent"
+            android:layout_height="35dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="14dp"
-            android:background="@android:color/holo_blue_light"
+            android:background="#2972A8"
             android:text="Quejas de Conductores de Conchos"
-            android:textColor="@android:color/white" />
+            android:textColor="#f6f6f6" />
 
         <Button
             android:id="@+id/preguntasButton"
             android:layout_width="300dp"
-            android:layout_height="match_parent"
+            android:layout_height="35dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="93dp"
-            android:background="@android:color/holo_blue_light"
+            android:layout_marginBottom="85dp"
+            android:background="#2972A8"
             android:text="Preguntas Frecuentes"
-            android:textColor="@android:color/white" />
+            android:textColor="#f6f6f6" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right"
+            android:layout_gravity="bottom|end"
             android:text="@string/software"
             android:textColor="#A9A9A9"
-            android:textSize="11sp"
+            android:textSize="12sp"
             android:textStyle="bold|italic" />
     </LinearLayout>
 
