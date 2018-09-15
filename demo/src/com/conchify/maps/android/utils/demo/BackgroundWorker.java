@@ -87,7 +87,7 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
     protected void onPreExecute() {
         alertDialog = new AlertDialog.Builder(context).create();
         alertDialog.setTitle("Form Status");
-        }
+    }
 
     @Override
     protected void onPostExecute(String result) {

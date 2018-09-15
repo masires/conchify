@@ -16,7 +16,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.main);
         Button trayectoriaButton = findViewById(R.id.trayectoriaButton);
         Button quejasButton = findViewById(R.id.quejasButon);
-
+        Button preguntasButton = findViewById(R.id.preguntasButton);
         trayectoriaButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -28,6 +28,12 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(v.getContext(), FormActivity.class));
+            }
+        });
+        preguntasButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), PreguntasActivity.class));
             }
         });
     }
