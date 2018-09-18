@@ -1,78 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/etNumero_placa_id"
+    <!--<EditText-->
+        <!--android:id="@+id/etNumero_placa_id"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:ems="10"-->
+        <!--android:hint="Placa ID"-->
+        <!--android:inputType="textPassword" />-->
+
+    <!--<EditText-->
+        <!--android:id="@+id/etNumero_carnet_id"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:ems="10"-->
+        <!--android:hint="Carnet ID"-->
+        <!--android:inputType="textPassword" />-->
+
+    <!--<EditText-->
+        <!--android:id="@+id/etNumero_franja_id"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:ems="10"-->
+        <!--android:hint="Franja ID"-->
+        <!--android:inputType="textPassword" />-->
+
+    <!--<EditText-->
+        <!--android:id="@+id/etComentario"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:ems="10"-->
+        <!--android:hint="Comentarios" />-->
+
+    <!--<EditText-->
+        <!--android:id="@+id/etTipo_Queja"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:ems="10"-->
+        <!--android:hint="Tipo de Queja"-->
+        <!--android:inputType="textPersonName" />-->
+
+    <!--<EditText-->
+        <!--android:id="@+id/etEstado"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:ems="10"-->
+        <!--android:hint="Estado"-->
+        <!--android:inputType="textPersonName" />-->
+
+    <!--<EditText-->
+        <!--android:id="@+id/etComentario_cierre"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:ems="10"-->
+        <!--android:hint="Comentario Cierre"-->
+        <!--android:inputType="textPersonName" />-->
+
+    <!--<EditText-->
+        <!--android:id="@+id/etAccion_diciplinaria"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:ems="10"-->
+        <!--android:hint="Accion Diciplinaria"-->
+        <!--android:inputType="textPersonName" />-->
+
+    <!--<Button-->
+        <!--android:id="@+id/btnSendFormInfo"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:onClick="OnFormInfo"-->
+        <!--android:text="Enviar" />-->
+
+
+    <WebView
+        android:id="@+id/webView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Placa ID"
-        android:inputType="textPassword" />
-
-    <EditText
-        android:id="@+id/etNumero_carnet_id"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Carnet ID"
-        android:inputType="textPassword" />
-
-    <EditText
-        android:id="@+id/etNumero_franja_id"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Franja ID"
-        android:inputType="textPassword" />
-
-    <EditText
-        android:id="@+id/etComentario"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Comentarios" />
-
-    <EditText
-        android:id="@+id/etTipo_Queja"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Tipo de Queja"
-        android:inputType="textPersonName" />
-
-    <EditText
-        android:id="@+id/etEstado"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Estado"
-        android:inputType="textPersonName" />
-
-    <EditText
-        android:id="@+id/etComentario_cierre"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Comentario Cierre"
-        android:inputType="textPersonName" />
-
-    <EditText
-        android:id="@+id/etAccion_diciplinaria"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Accion Diciplinaria"
-        android:inputType="textPersonName" />
-
-    <Button
-        android:id="@+id/btnSendFormInfo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="OnFormInfo"
-        android:text="Enviar" />
-
-
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"/>
+</RelativeLayout>
