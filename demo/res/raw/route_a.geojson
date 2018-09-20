@@ -2197,7 +2197,8 @@
         ]
       },
       "properties": {
-        "title": "A"
+        "title": "A",
+        "hex": "#16a085"
       }
     }
   ]

@@ -12,9 +12,7 @@
     <string name="mylocation_button">My Location Button</string>
     <string name="compass">Compass</string>
     <string name="zoom_buttons">Zoom Buttons</string>
-    <string name="software">Onyx Software &#169; 2018</string>
-    <string name="feche_selector">Seleccione Fecha</string>
-    <string name="feedback">Conchify Feedback</string>
-
+    <string name="feche_selector">Seleccione la fecha</string>
+    <string name="software">CONTRU &#169; 2018</string>
 
 </resources>

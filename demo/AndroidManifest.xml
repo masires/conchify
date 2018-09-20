@@ -46,7 +46,7 @@
         </activity>
         <activity android:name=".GeoJsonActivity"/>
         <activity android:name=".FormActivity"/>
-        <activity android:name=".PreguntasActivity"/>
+        <activity android:name=".FAQActivity"/>
     </application>
 
 </manifest>

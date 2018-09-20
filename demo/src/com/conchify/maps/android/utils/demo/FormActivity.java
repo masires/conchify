@@ -97,7 +97,7 @@ public class FormActivity extends Activity {
 
 
         if (str_etNumero_place_id.equals("") && str_etNumero_carnet_id.equals("") && str_etNumero_franja_id.equals("")) {
-            Toast.makeText(getApplicationContext(), "Necesita una franja, placa o  carnet para mandar una queja", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Debe especificar una franja, placa o carnet para enviar una queja.", Toast.LENGTH_SHORT).show();
         } else {
             String type = "form";
             BackgroundWorker backgroundWorker = new BackgroundWorker(this);

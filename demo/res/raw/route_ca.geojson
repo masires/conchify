@@ -964,7 +964,9 @@
           ]
         ]
       },
-      "properties": {}
+      "properties": {
+        "title": "CA",
+        "hex": "#d47500"}
     },
     {
       "type": "Feature",
@@ -1293,7 +1295,9 @@
           ]
         ]
       },
-      "properties": {}
+      "properties": {
+        "title": "CA",
+        "hex": "#d47500"}
     },
     {
       "type": "Feature",
@@ -1422,7 +1426,9 @@
           ]
         ]
       },
-      "properties": {}
+      "properties": {
+        "title": "CA",
+        "hex": "#d47500"}
     },
     {
       "type": "Feature",
@@ -1555,7 +1561,9 @@
           ]
         ]
       },
-      "properties": {}
+      "properties": {
+        "title": "CA",
+        "hex": "#d47500"}
     },
     {
       "type": "Feature",
@@ -2217,7 +2225,8 @@
         ]
       },
       "properties": {
-        "title": "CA"
+        "title": "CA",
+        "hex": "#d47500"
       }
     }
   ]
