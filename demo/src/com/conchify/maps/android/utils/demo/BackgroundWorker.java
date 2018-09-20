@@ -41,9 +41,6 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 String etTipo_Queja = params[5];
                 String fecha = params[6];
                 String etComentario = params[7];
-                String etEsatado = params[8];
-                String etComentario_cierre = params[9];
-                String etAccion_diciplinaria = params[10];
                 URL url = new URL(form_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");

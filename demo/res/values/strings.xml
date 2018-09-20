@@ -14,5 +14,7 @@
     <string name="zoom_buttons">Zoom Buttons</string>
     <string name="software">Onyx Software &#169; 2018</string>
     <string name="feche_selector">Seleccione Fecha</string>
+    <string name="feedback">Conchify Feedback</string>
+
 
 </resources>

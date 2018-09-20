@@ -13,8 +13,7 @@
         android:paddingTop="25dp"
         android:paddingBottom="10dp"
         android:textColor="@android:color/darker_gray"
-        android:text="Conchify Feedback"
-
+        android:text="@string/feedback"
         android:textAlignment="center"
         android:textSize="35sp" />
 
