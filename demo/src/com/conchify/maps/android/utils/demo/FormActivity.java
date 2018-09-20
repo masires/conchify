@@ -102,7 +102,7 @@ public class FormActivity extends Activity {
             String type = "form";
             BackgroundWorker backgroundWorker = new BackgroundWorker(this);
             backgroundWorker.execute(type, str_etCorreo_Electronico_id, str_etNumero_place_id, str_etNumero_carnet_id, str_etNumero_franja_id,
-                    str_etTipo_Queja, str_fecha, str_etComentario, str_etEstado, str_etComentario_cierra, str_etAccion_diciplinaria);
+                    str_etTipo_Queja, str_fecha, str_etComentario);
             finish();
         }
     }
