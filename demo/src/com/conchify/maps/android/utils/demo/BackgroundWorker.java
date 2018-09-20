@@ -34,14 +34,16 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
 
         if (type.equals("form")) {
             try {
-                String etNumero_placa_id = params[1];
-                String etNumero_carnet_id = params[2];
-                String etNumero_franja_id = params[3];
-                String etComentario = params[4];
+                String etCorreo_Electronico_id = params[1];
+                String etNumero_placa_id = params[2];
+                String etNumero_carnet_id = params[3];
+                String etNumero_franja_id = params[4];
                 String etTipo_Queja = params[5];
-                String etEsatado = params[6];
-                String etComentario_cierre = params[7];
-                String etAccion_diciplinaria = params[8];
+                String fecha = params[6];
+                String etComentario = params[7];
+                String etEsatado = params[8];
+                String etComentario_cierre = params[9];
+                String etAccion_diciplinaria = params[10];
                 URL url = new URL(form_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
@@ -49,14 +51,13 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 httpURLConnection.setDoInput(true);
                 OutputStream outputStream = httpURLConnection.getOutputStream();
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
-                String post_data = URLEncoder.encode("numero_placa_id", "UTF-8") + "=" + URLEncoder.encode(etNumero_placa_id, "UTF-8") + "&"
+                String post_data = URLEncoder.encode("correo_electronico", "UTF-8") + "=" + URLEncoder.encode(etCorreo_Electronico_id, "UTF-8") + "&"
+                        + URLEncoder.encode("numero_placa_id", "UTF-8") + "=" + URLEncoder.encode(etNumero_placa_id, "UTF-8") + "&"
                         + URLEncoder.encode("numero_carnet_id", "UTF-8") + "=" + URLEncoder.encode(etNumero_carnet_id, "UTF-8") + "&"
                         + URLEncoder.encode("numero_franja_id", "UTF-8") + "=" + URLEncoder.encode(etNumero_franja_id, "UTF-8") + "&"
-                        + URLEncoder.encode("comentario", "UTF-8") + "=" + URLEncoder.encode(etComentario, "UTF-8") + "&"
                         + URLEncoder.encode("tipo_queja", "UTF-8") + "=" + URLEncoder.encode(etTipo_Queja, "UTF-8") + "&"
-                        + URLEncoder.encode("estado", "UTF-8") + "=" + URLEncoder.encode(etEsatado, "UTF-8") + "&"
-                        + URLEncoder.encode("comentario_cierre", "UTF-8") + "=" + URLEncoder.encode(etComentario_cierre, "UTF-8") + "&"
-                        + URLEncoder.encode("accion_diciplinaria", "UTF-8") + "=" + URLEncoder.encode(etAccion_diciplinaria, "UTF-8");
+                        + URLEncoder.encode("fecha", "UTF-8") + "=" + URLEncoder.encode(fecha, "UTF-8") + "&"
+                        + URLEncoder.encode("comentario", "UTF-8") + "=" + URLEncoder.encode(etComentario, "UTF-8");
                 bufferedWriter.write(post_data);
                 bufferedWriter.flush();
                 bufferedWriter.close();
@@ -82,6 +83,7 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
 
         return null;
     }
+
 
     @Override
     protected void onPreExecute() {
