@@ -13,11 +13,5 @@ public class FAQActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.faq);
 
-//        String top = "Preguntas frecuentes sobre nuestra aplicación:";
-//        TextView faqview = findViewById(R.id.faqView);
-//        faqview.setText(top);
-//        faqview.setTextSize(18);
-//        faqview.setTypeface(null, Typeface.BOLD);
-//        faqview.setTextColor(Color.BLACK);
     }
 }
