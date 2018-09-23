@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -11,10 +12,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:paddingBottom="10dp"
+        android:textColor="#6E6E6E"
         android:paddingTop="25dp"
         android:text="Quéjese aquí"
         android:textAlignment="center"
-        android:textColor="#A9A9A9"
         android:textSize="30sp" />
 
 
@@ -88,8 +89,6 @@
         android:layout_gravity="center_horizontal"
         android:background="#2972A8"
         android:onClick="OnFormInfo"
-        android:padding="15dp"
-        android:text="Enviar"
-        android:textColor="@android:color/white" />
-
+        android:text="Enviar" />
+  
 </LinearLayout>
