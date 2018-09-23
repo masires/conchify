@@ -156,7 +156,10 @@
           ]
         ]
       },
-      "properties": {}
+      "properties": {
+        "title": "U",
+        "hex": "#96281b"
+      }
     },
     {
       "type": "Feature",
@@ -313,7 +316,10 @@
           ]
         ]
       },
-      "properties": {}
+      "properties": {
+        "title": "U",
+        "hex": "#96281b"
+      }
     },
     {
       "type": "Feature",
@@ -382,7 +388,10 @@
           ]
         ]
       },
-      "properties": {}
+      "properties": {
+        "title": "U",
+        "hex": "#96281b"
+      }
     },
     {
       "type": "Feature",
@@ -419,7 +428,10 @@
           ]
         ]
       },
-      "properties": {}
+      "properties": {
+        "title": "U",
+        "hex": "#96281b"
+      }
     }
   ]
 }

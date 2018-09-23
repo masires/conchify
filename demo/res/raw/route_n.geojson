@@ -28,7 +28,10 @@
           ]
         ]
       },
-      "properties": {}
+      "properties": {
+        "title": "N",
+        "hex": "#2e343b"
+      }
     },
     {
       "type": "Feature",
@@ -241,7 +244,10 @@
           ]
         ]
       },
-      "properties": {}
+      "properties": {
+        "title": "N",
+        "hex": "#2e343b"
+      }
     },
     {
       "type": "Feature",
@@ -258,7 +264,10 @@
           ]
         ]
       },
-      "properties": {}
+      "properties": {
+        "title": "N",
+        "hex": "#2e343b"
+      }
     }
   ]
 }

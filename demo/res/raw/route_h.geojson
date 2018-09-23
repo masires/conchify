@@ -48,7 +48,10 @@
           ]
         ]
       },
-      "properties": {}
+      "properties": {
+        "title": "H",
+        "hex": "#804600"
+      }
     },
     {
       "type": "Feature",
@@ -221,7 +224,10 @@
           ]
         ]
       },
-      "properties": {}
+      "properties": {
+        "title": "H",
+        "hex": "#804600"
+      }
     },
     {
       "type": "Feature",
@@ -306,7 +312,10 @@
           ]
         ]
       },
-      "properties": {}
+      "properties": {
+        "title": "H",
+        "hex": "#804600"
+      }
     }
   ]
 }

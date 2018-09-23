@@ -6,8 +6,8 @@
     android:padding="20dp">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <TextView
@@ -35,7 +35,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Hasta ahora contamos con las siguientes rutas: A, B, CA, F, G, H, HB, K, M, N, O, PA, U y ZP. Otras serán añadidas eventualmente."
+            android:text="Hasta ahora contamos con las siguientes rutas: A, B, CA, F, G, H, K, M, N, O, PA, y U. Otras serán añadidas eventualmente."
             android:textSize="16sp"
             />
 

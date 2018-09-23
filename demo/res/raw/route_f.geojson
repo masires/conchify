@@ -96,7 +96,10 @@
           ]
         ]
       },
-      "properties": {}
+      "properties": {
+        "title": "F",
+        "hex": "#4f5a65"
+      }
     },
     {
       "type": "Feature",
@@ -177,7 +180,10 @@
           ]
         ]
       },
-      "properties": {}
+      "properties": {
+        "title": "F",
+        "hex": "#4f5a65"
+      }
     },
     {
       "type": "Feature",
@@ -198,7 +204,10 @@
           ]
         ]
       },
-      "properties": {}
+      "properties": {
+        "title": "F",
+        "hex": "#4f5a65"
+      }
     },
     {
       "type": "Feature",
@@ -275,7 +284,10 @@
           ]
         ]
       },
-      "properties": {}
+      "properties": {
+        "title": "F",
+        "hex": "#4f5a65"
+      }
     },
     {
       "type": "Feature",
@@ -308,7 +320,10 @@
           ]
         ]
       },
-      "properties": {}
+      "properties": {
+        "title": "F",
+        "hex": "#4f5a65"
+      }
     },
     {
       "type": "Feature",
@@ -333,7 +348,10 @@
           ]
         ]
       },
-      "properties": {}
+      "properties": {
+        "title": "F",
+        "hex": "#4f5a65"
+      }
     }
   ]
 }
