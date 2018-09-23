@@ -2,235 +2,110 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="20dp">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:orientation="vertical">
-    <!--<TextView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:id="@+id/faqView"/>-->
 
-    <TextView
-        android:id="@+id/text_view_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#000"
-        android:paddingTop="25dp"
-        android:textStyle="italic"
-        android:text="Preguntas frecuentes sobre nuestra aplicación"
-        android:textAlignment="center"
-        android:layout_gravity="center"
-        android:textSize="19.2sp" />
+        <TextView
+            android:id="@+id/text_view_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="25dp"
+            android:paddingBottom="10dp"
+            android:textColor="#6E6E6E"
+            android:text="Preguntas Frecuentes"
+            android:textAlignment="center"
+            android:textSize="20sp" />
 
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textColor="#000"
-        android:paddingTop="25sp"
-        android:textStyle="bold"
-        android:text="Question in Bold"
-        android:textSize="18sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Answer goes here."
+            android:textColor="#6E6E6E"
+            android:paddingTop="25sp"
+            android:textStyle="bold"
+            android:text="¿Cuáles rutas están disponibles en el mapa?"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hasta ahora contamos con las siguientes rutas: A, B, CA, F, G, H, HB, K, M, N, O, PA, U y ZP. Otras serán añadidas eventualmente."
             android:textSize="16sp"
             />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textColor="#000"
+            android:textColor="#6E6E6E"
             android:paddingTop="25sp"
             android:textStyle="bold"
-            android:text="Question in Bold"
+            android:text="¿La aplicación marcará la ruta que debo tomar desde mi posición actual hasta el destino?"
             android:textSize="18sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Answer goes here."
+            android:text="No. Esta aplicación solo marca las trayectorias de las rutas de concho como referencia para el usuario."
             android:textSize="16sp"
             />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textColor="#000"
+            android:textColor="#6E6E6E"
             android:paddingTop="25sp"
             android:textStyle="bold"
-            android:text="Question in Bold"
+            android:text="¿Cuáles datos debo agregar en una queja?"
             android:textSize="18sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Answer goes here."
-            android:textSize="16sp"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textColor="#000"
-            android:paddingTop="25sp"
-            android:textStyle="bold"
-            android:text="Question in Bold"
-            android:textSize="18sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Answer goes here."
+            android:text="Debe insertar uno de los tres siguientes identificadores:  número de franja, número de carné o número de placa. Estos serán utilizados para poder darle seguimiento a su caso. Trate de ser conciso en su reporte, sin dejar ningún detalle atrás."
             android:textSize="16sp"
             />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textColor="#000"
+            android:textColor="#6E6E6E"
             android:paddingTop="25sp"
             android:textStyle="bold"
-            android:text="Question in Bold"
+            android:text="¿Cuáles casos puedo reportar?"
             android:textSize="18sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Answer goes here."
+            android:text="Todo tipo de circunstancia que crea usted amerite un reporte, ya sea música muy alta, conducir inadecuadamente, cortar la ruta, y demás."
             android:textSize="16sp"
             />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textColor="#000"
+            android:textColor="#6E6E6E"
             android:paddingTop="25sp"
             android:textStyle="bold"
-            android:text="Question in Bold"
+            android:text="¿Por qué debo proveer mi correo electrónico?"
             android:textSize="18sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Answer goes here."
-            android:textSize="16sp"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textColor="#000"
-            android:paddingTop="25sp"
-            android:textStyle="bold"
-            android:text="Question in Bold"
-            android:textSize="18sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Answer goes here."
-            android:textSize="16sp"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textColor="#000"
-            android:paddingTop="25sp"
-            android:textStyle="bold"
-            android:text="Question in Bold"
-            android:textSize="18sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Answer goes here."
-            android:textSize="16sp"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textColor="#000"
-            android:paddingTop="25sp"
-            android:textStyle="bold"
-            android:text="Question in Bold"
-            android:textSize="18sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Answer goes here."
-            android:textSize="16sp"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textColor="#000"
-            android:paddingTop="25sp"
-            android:textStyle="bold"
-            android:text="Question in Bold"
-            android:textSize="18sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Answer goes here."
-            android:textSize="16sp"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textColor="#000"
-            android:paddingTop="25sp"
-            android:textStyle="bold"
-            android:text="Question in Bold"
-            android:textSize="18sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Answer goes here."
-            android:textSize="16sp"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textColor="#000"
-            android:paddingTop="25sp"
-            android:textStyle="bold"
-            android:text="Question in Bold"
-            android:textSize="18sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Answer goes here."
-            android:textSize="16sp"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textColor="#000"
-            android:paddingTop="25sp"
-            android:textStyle="bold"
-            android:text="Question in Bold"
-            android:textSize="18sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Answer goes here."
+            android:text="Así podremos contactarnos con usted para darle seguimiento sobre su reporte. En caso de que alguna acción sea tomada, usted será informado de que así ha sido."
             android:textSize="16sp"
             />
 
 
 
     </LinearLayout>
+
+
 
 </ScrollView>
