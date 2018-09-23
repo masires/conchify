@@ -38,9 +38,8 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 String etNumero_placa_id = params[2];
                 String etNumero_carnet_id = params[3];
                 String etNumero_franja_id = params[4];
-                String etTipo_Queja = params[5];
-                String fecha = params[6];
-                String etComentario = params[7];
+                String fecha = params[5];
+                String etComentario = params[6];
                 URL url = new URL(form_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
@@ -52,7 +51,6 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                         + URLEncoder.encode("numero_placa_id", "UTF-8") + "=" + URLEncoder.encode(etNumero_placa_id, "UTF-8") + "&"
                         + URLEncoder.encode("numero_carnet_id", "UTF-8") + "=" + URLEncoder.encode(etNumero_carnet_id, "UTF-8") + "&"
                         + URLEncoder.encode("numero_franja_id", "UTF-8") + "=" + URLEncoder.encode(etNumero_franja_id, "UTF-8") + "&"
-                        + URLEncoder.encode("tipo_queja", "UTF-8") + "=" + URLEncoder.encode(etTipo_Queja, "UTF-8") + "&"
                         + URLEncoder.encode("fecha", "UTF-8") + "=" + URLEncoder.encode(fecha, "UTF-8") + "&"
                         + URLEncoder.encode("comentario", "UTF-8") + "=" + URLEncoder.encode(etComentario, "UTF-8");
                 bufferedWriter.write(post_data);
