@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:padding="20dp">
 
     <LinearLayout
@@ -15,97 +15,91 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:paddingTop="25dp"
             android:paddingBottom="10dp"
-            android:textColor="#6E6E6E"
+            android:paddingTop="25dp"
             android:text="Preguntas Frecuentes"
             android:textAlignment="center"
+            android:textColor="#6E6E6E"
             android:textSize="20sp" />
 
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textColor="#6E6E6E"
             android:paddingTop="25sp"
-            android:textStyle="bold"
             android:text="¿Cuáles rutas están disponibles en el mapa?"
-            android:textSize="18sp" />
+            android:textColor="#6E6E6E"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Hasta ahora contamos con las siguientes rutas: A, B, CA, F, G, H, K, M, N, O, PA, y U. Otras serán añadidas eventualmente."
-            android:textSize="16sp"
-            />
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textColor="#6E6E6E"
             android:paddingTop="25sp"
-            android:textStyle="bold"
             android:text="¿La aplicación marcará la ruta que debo tomar desde mi posición actual hasta el destino?"
-            android:textSize="18sp" />
+            android:textColor="#6E6E6E"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="No. Esta aplicación solo marca las trayectorias de las rutas de concho como referencia para el usuario."
-            android:textSize="16sp"
-            />
+            android:textSize="16sp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textColor="#6E6E6E"
             android:paddingTop="25sp"
-            android:textStyle="bold"
             android:text="¿Cuáles datos debo agregar en una queja?"
-            android:textSize="18sp" />
+            android:textColor="#6E6E6E"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Debe insertar uno de los tres siguientes identificadores:  número de franja, número de carné o número de placa. Estos serán utilizados para poder darle seguimiento a su caso. Trate de ser conciso en su reporte, sin dejar ningún detalle atrás."
-            android:textSize="16sp"
-            />
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textColor="#6E6E6E"
             android:paddingTop="25sp"
-            android:textStyle="bold"
             android:text="¿Cuáles casos puedo reportar?"
-            android:textSize="18sp" />
+            android:textColor="#6E6E6E"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Todo tipo de circunstancia que crea usted amerite un reporte, ya sea música muy alta, conducir inadecuadamente, cortar la ruta, y demás."
-            android:textSize="16sp"
-            />
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textColor="#6E6E6E"
             android:paddingTop="25sp"
-            android:textStyle="bold"
             android:text="¿Por qué debo proveer mi correo electrónico?"
-            android:textSize="18sp" />
+            android:textColor="#6E6E6E"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Así podremos contactarnos con usted para darle seguimiento sobre su reporte. En caso de que alguna acción sea tomada, usted será informado de que así ha sido."
-            android:textSize="16sp"
-            />
-
+            android:textSize="16sp" />
 
 
     </LinearLayout>
-
 
 
 </ScrollView>

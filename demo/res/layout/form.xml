@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -11,11 +10,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:paddingTop="25dp"
         android:paddingBottom="10dp"
-        android:textColor="#6E6E6E"
+        android:paddingTop="25dp"
         android:text="Quéjese aquí"
         android:textAlignment="center"
+        android:textColor="#6E6E6E"
         android:textSize="30sp" />
 
 
@@ -25,31 +24,30 @@
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
         android:ems="10"
-        android:paddingTop="10dp"
-        android:padding="15dp"
         android:hint="Introduzca su correo electrónico"
         android:inputType="textPersonName"
-        />
+        android:padding="15dp"
+        android:paddingTop="10dp" />
 
     <EditText
         android:id="@+id/etNumero_placa_id"
         android:layout_width="match_parent"
-        android:background="@android:color/transparent"
         android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
         android:ems="10"
-        android:padding="15dp"
         android:hint="Introduzca número de placa"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:padding="15dp" />
 
     <EditText
         android:id="@+id/etNumero_carnet_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
         android:background="@android:color/transparent"
-        android:padding="15dp"
+        android:ems="10"
         android:hint="Introduzca número de carnet"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:padding="15dp" />
 
     <EditText
         android:id="@+id/etNumero_franja_id"
@@ -57,19 +55,10 @@
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
         android:ems="10"
-        android:padding="15dp"
         android:hint="Introduzca número de franja"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:padding="15dp" />
 
-    <EditText
-        android:id="@+id/etTipo_Queja"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:ems="10"
-        android:padding="15dp"
-        android:hint="Especifíque el tipo de queja"
-        android:inputType="textPersonName" />
 
     <TextView
         android:id="@+id/tvDate"
@@ -85,23 +74,23 @@
     <EditText
         android:id="@+id/etComentario"
         android:layout_width="match_parent"
-        android:padding="15dp"
         android:layout_height="150dp"
         android:background="@android:color/transparent"
         android:ems="10"
+        android:gravity="top"
         android:hint="Describa detalladamente lo sucecido"
-        android:gravity="top"/>
+        android:padding="15dp" />
 
     <Button
         android:id="@+id/btnSendFormInfo"
-        android:padding="15dp"
         android:layout_width="100dp"
-        android:background="#2972A8"
-        android:textColor="@android:color/white"
-        android:layout_gravity="center_horizontal"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="#2972A8"
         android:onClick="OnFormInfo"
-        android:text="Enviar" />
+        android:padding="15dp"
+        android:text="Enviar"
+        android:textColor="@android:color/white" />
 
-  
+
 </LinearLayout>
