@@ -33,7 +33,7 @@ git@github.com:masires/conchify.git
 
 
 ## Maintainers
-This project is mantained by:
+This project was mantained by:
 * [Emanuel Simón](https://github.com/masires)
 * [Gabriel Rodríguez](https://github.com/Garoto0518)
 
